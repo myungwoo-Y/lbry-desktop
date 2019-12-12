@@ -925,5 +925,9 @@
   "Available": "Available",
   "Unable to load your saved preferences.": "Unable to load your saved preferences.",
   "Add/Delete": "Add/Delete",
-  "The wallet server took a bit too long. Resetting defaults just in case. Shutdown (Cmd/Ctrl+Q) LBRY and restart if this continues.": "The wallet server took a bit too long. Resetting defaults just in case. Shutdown (Cmd/Ctrl+Q) LBRY and restart if this continues."
+  "The wallet server took a bit too long. Resetting defaults just in case. Shutdown (Cmd/Ctrl+Q) LBRY and restart if this continues.": "The wallet server took a bit too long. Resetting defaults just in case. Shutdown (Cmd/Ctrl+Q) LBRY and restart if this continues.",
+  "Provide a description and link to your license": "Provide a description and link to your license",
+  "Walletserver preference": "Walletserver preference",
+  "Wallet servers": "Wallet servers",
+  "lbry.tv": "lbry.tv"
 }
