@@ -22,11 +22,11 @@ export default (props: Props) => {
       <div className="section--padded section__subtitle">
         <I18nMessage
           tokens={{
-            settingsLink: <Button button="link" navigate="/$/settings" label={__('content viewing preferences')} />,
+            settings_link: <Button button="link" navigate="/$/settings" label={__('content viewing preferences')} />,
             message: getMessage(),
           }}
         >
-          %message% hidden due to your %settingsLink%.
+          %message% hidden due to your %settings_link%.
         </I18nMessage>
       </div>
     )
