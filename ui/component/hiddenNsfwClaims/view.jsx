@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import Button from 'component/button';
+import I18nMessage from 'component/i18nMessage';
 
 type Props = {
   numberOfHiddenClaims: number,
@@ -9,14 +10,24 @@ type Props = {
 };
 
 export default (props: Props) => {
-  const { numberOfHiddenClaims, obscureNsfw } = props;
+  const { numberOfHiddenClaims: number, obscureNsfw } = props;
 
+  function getMessage() {
+    if (number > 1) return __('%number% files', { number });
+    return __('%number% file', { number });
+  }
   return (
     obscureNsfw &&
-    Boolean(numberOfHiddenClaims) && (
+    Boolean(number) && (
       <div className="section--padded section__subtitle">
-        {numberOfHiddenClaims} {numberOfHiddenClaims > 1 ? __('files') : __('file')} {__('hidden due to your')}{' '}
-        <Button button="link" navigate="/$/settings" label={__('content viewing preferences')} />.
+        <I18nMessage
+          tokens={{
+            settingsLink: <Button button="link" navigate="/$/settings" label={__('content viewing preferences')} />,
+            message: getMessage(),
+          }}
+        >
+          %message% hidden due to your %settingsLink%.
+        </I18nMessage>
       </div>
     )
   );
